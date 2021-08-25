@@ -1,6 +1,6 @@
 # SerpentineHeavenlyFossil
 
-Программа на основе Bitly API для сокращения ссылок
+Программа на основе [Bitly Api](https://dev.bitly.com/ "Bitly Api") для сокращения ссылок
  и подсчета переходов по сокращенной ссылке.
 
 ## Environment
