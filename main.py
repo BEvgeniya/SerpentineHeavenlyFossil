@@ -41,21 +41,21 @@ def main():
     }
 
     parser = argparse.ArgumentParser(description='Сохраняет переданные в консоль URL адреса')
-    parser.add_argument('user_input', nargs='+', help='Введенные ссылки')
+    parser.add_argument('user_links', nargs='+', help='Введенные ссылки')
     args = parser.parse_args()
     
-    for user_input in args.user_input:
+    for user_links in args.user_links:
         try:
-            requests.get(user_input).raise_for_status()
+            requests.get(user_links).raise_for_status()
         except requests.exceptions.HTTPError:
                 print('Нерабочая ссылка')
                 return
 
-        if is_bitlink(user_input, header):
-            clicks = count_clicks(user_input, header)
+        if is_bitlink(user_links, header):
+            clicks = count_clicks(user_links, header)
             print('Количество кликов ', clicks)
         else:
-            bitlink = shorten_link(user_input, header)
+            bitlink = shorten_link(user_links, header)
             print('Битлинк ', bitlink)
 
 
