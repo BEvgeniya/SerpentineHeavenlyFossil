@@ -20,7 +20,7 @@ pip install python-dotenv
 ### Environment variables
 
 - BITLY_TOKEN
-- 
+ 
 #### How to get
 
 Зарегистрируйтесь на bitly api (https://dev.bitly.com/) и получите уникальный api-ключ
@@ -32,7 +32,7 @@ pip install python-dotenv
 
 ```bash
 
-$ python main.py
+ python main.py
 
 ```
 
