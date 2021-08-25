@@ -43,18 +43,18 @@ def main():
     parser.add_argument('user_links', nargs='+', help='Введенные ссылки')
     args = parser.parse_args()
     
-    for user_links in args.user_links:
+    for user_link in args.user_links:
         try:
-            requests.get(user_links).raise_for_status()
+            requests.get(user_link).raise_for_status()
         except requests.exceptions.HTTPError:
-                print('Нерабочая ссылка')
+                print('Нерабочая ссылка - ', user_link)
                 return
 
-        if is_bitlink(user_links, header):
-            clicks = count_clicks(user_links, header)
+        if is_bitlink(user_link, header):
+            clicks = count_clicks(user_link, header)
             print('Количество кликов ', clicks)
         else:
-            bitlink = shorten_link(user_links, header)
+            bitlink = shorten_link(user_link, header)
             print('Битлинк ', bitlink)
 
 
