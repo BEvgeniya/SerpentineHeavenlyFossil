@@ -39,7 +39,7 @@ def main():
         'Authorization': f'Bearer {bitly_token}'
     }
 
-    parser = argparse.ArgumentParser(description='Сохраняет переданные в консоль URL адреса')
+    parser = argparse.ArgumentParser(description='Создание парсера, который собирает введенные в консоль данные')
     parser.add_argument('user_links', nargs='+', help='Введенные ссылки')
     args = parser.parse_args()
     
