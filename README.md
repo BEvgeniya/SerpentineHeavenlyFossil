@@ -10,6 +10,7 @@
 Требует Python 3.0+ интерпретатор и установку библиотек:
 1) requests
 2) python-dotenv
+
 А также токен Bitly API
 
 ```bash
