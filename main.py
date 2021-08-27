@@ -6,6 +6,7 @@ from urllib.parse import urlunparse
 import requests
 from dotenv import load_dotenv
 
+
 def shorten_link(url, header):
     request_url = 'https://api-ssl.bitly.com/v4/shorten'
     request_body = {'long_url': url, 'domain': 'bit.ly'}
