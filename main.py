@@ -1,13 +1,10 @@
 import os
-
-import requests
 import argparse
-
 from urllib.parse import urlparse
 from urllib.parse import urlunparse
+
+import requests
 from dotenv import load_dotenv
-
-
 
 def shorten_link(url, header):
     request_url = 'https://api-ssl.bitly.com/v4/shorten'
